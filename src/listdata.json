@@ -1,0 +1,12 @@
+{
+    "cyber_Security" : {
+        "name" : "Cyber Security",
+        "subItems" :  [
+            {"device":"IPS and Security", "normalStatus": "AntiVirus logs no results"},
+            {"device":"Firewall Bandwidth", "normalStatus": "Traffic < Max capacity"}
+        ]
+    }
+        
+       
+        
+}

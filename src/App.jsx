@@ -13,6 +13,8 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Img1 from './assets/noagun.png'
 import ChecklistForm from './checklistForm';
+
+import listData from './listdata.json'
 import './App.css'
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
  
   return (
     <div >
+      {listData.cyber_Security.subItems[0].normalStatus}
       <ChecklistForm/>
     </div>
   )

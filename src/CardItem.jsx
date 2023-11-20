@@ -11,7 +11,7 @@ import Img1 from './assets/vsp.jpg'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 
-export default function CardItem() {
+export default function CardItem({system, device, normalStatus}) {
 
   const [selectedValue, setSelectedValue] = React.useState('a');
 
@@ -30,16 +30,19 @@ export default function CardItem() {
       <CardContent >
         <div style={{margin: "2px"}}>
           <Typography gutterBottom variant="h5" component="div" >
-         Cyber Security
+        {system}
         </Typography>
         </div>
         <div style={{margin: "5px"}}>
           <Grid container spacing={2}>
-            <Grid xs={6} md={8} >
-              <div align="left">IPS & Firewall Security Events Log</div>
+            <Grid xs={4} md={4} >
+              <div align="left">{device}</div>
+            </Grid>
+            <Grid xs={4} md={4} >
+              <div align="left">{normalStatus}</div>
             </Grid>
             {/* radio box */}
-            <Grid xs={3} md={2}>
+            <Grid xs={2} md={2}>
               <div> 
                 <Radio
                   checked={selectedValue === 'a'}
@@ -50,7 +53,7 @@ export default function CardItem() {
                 />
               </div>
             </Grid>
-            <Grid xs={3} md={2}>
+            <Grid xs={2} md={2}>
               <div>
                 <Radio
                   checked={selectedValue === 'b'}
