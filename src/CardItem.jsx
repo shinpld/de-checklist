@@ -28,13 +28,25 @@ export default function CardItem({system, device, normalStatus}) {
        image= {Img1}
       /> 
       <CardContent >
-        <div style={{margin: "2px"}}>
+        <div style={{margin: "5px"}}>
           <Typography gutterBottom variant="h5" component="div" >
         {system}
         </Typography>
         </div>
         <div style={{margin: "5px"}}>
-          <Grid container spacing={2}>
+          <Grid container spacing={2}
+                sx={{
+                  '--Grid-borderWidth': '1px',
+                  borderTop: 'var(--Grid-borderWidth) solid',
+                  borderLeft: 'var(--Grid-borderWidth) solid',
+                  borderColor: 'divider',
+                  '& > div': {
+                    borderRight: 'var(--Grid-borderWidth) solid',
+                    borderBottom: 'var(--Grid-borderWidth) solid',
+                    borderColor: 'divider',
+                  },
+                }}
+            >
             <Grid xs={4} md={4} >
               <div align="left">{device}</div>
             </Grid>
